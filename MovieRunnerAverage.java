@@ -3,7 +3,7 @@ import java.util.Collections;
 
 public class MovieRunnerAverage {
     public void printAverageRatings() {
-        SecondRatings sr = new SecondRatings("data/ratedmovies_short.csv", "data/ratings_short.csv");//do i need put filename here?
+        SecondRatings sr = new SecondRatings("data/ratedmovies_short.csv", "data/ratings_short.csv");
         System.out.println("Movie size = " + sr.getMovieSize());
         System.out.println("Rater size = " + sr.getRaterSize());
         ArrayList<Rating> ratingList = sr.getAverageRatings(2);
@@ -14,7 +14,7 @@ public class MovieRunnerAverage {
     }
     
     public void getAverageRatingOneMovie() {
-        SecondRatings sr = new SecondRatings("data/ratedmovies_short.csv", "data/ratings_short.csv");//do i need put filename here?
+        SecondRatings sr = new SecondRatings("data/ratedmovies_short.csv", "data/ratings_short.csv");
         ArrayList<Rating> ratingList = sr.getAverageRatings(2);
         String movieTitle = "The Godfather";
         for (Rating i : ratingList) {

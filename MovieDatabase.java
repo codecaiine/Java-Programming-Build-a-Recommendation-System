@@ -3,7 +3,7 @@ import java.util.HashMap;
 
 public class MovieDatabase {
     private static HashMap<String, Movie> ourMovies;
-    //before it's an Arraylist<Movie>
+
     
     public static void initialize(String moviefile) {
         if (ourMovies == null) {
@@ -76,7 +76,7 @@ public class MovieDatabase {
         return ourMovies.size();
     }
     
-    // why no need implement filter?
+
     public static ArrayList<String> filterBy(Filter f) {
         initialize();
         ArrayList<String> list = new ArrayList<String>();
@@ -85,7 +85,7 @@ public class MovieDatabase {
                 list.add(id);
             }
         }
-        return list;//ArrayList of movie id
+        return list;
     }
     
 }

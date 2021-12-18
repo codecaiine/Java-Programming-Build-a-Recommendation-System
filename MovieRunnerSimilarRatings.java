@@ -13,10 +13,9 @@ public class MovieRunnerSimilarRatings {
     }
     
     public void printSimilarRatingsByGenre() {
-        FourthRatings tr4 = new FourthRatings();//do i need put filename here?
+        FourthRatings tr4 = new FourthRatings();
         ArrayList<Rating> ratingList = tr4.getSimilarRatingsByFilter("65", 20, 5, new GenreFilter("Action"));
         System.out.println("Found ratings for movies : " + ratingList.size());
-        //Collections.sort(ratingList); already sort in FourthRating;
         for (int i = 0; i < 3; i++) {
             System.out.printf("%-10.2f%-16s%-5s%n", ratingList.get(i).getValue(), MovieDatabase.getTitle(ratingList.get(i).getItem()), MovieDatabase.getGenres(ratingList.get(i).getItem()));
         }

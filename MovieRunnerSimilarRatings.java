@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class MovieRunnerSimilarRatings {
   
    public void printSimilarRatings() {
-        FourthRatings tr = new FourthRatings();//do i need put filename here?
+        FourthRatings tr = new FourthRatings();
         ArrayList<Rating> ratingList = tr.getSimilarRatings("65", 20, 5);
         System.out.println("Found ratings for movies : " + ratingList.size());
         
@@ -37,7 +37,7 @@ public class MovieRunnerSimilarRatings {
     }
     
     public void printSimilarRatingsByGenreAndMinutes() {
-        FourthRatings tr4 = new FourthRatings();//do i need put filename here?
+        FourthRatings tr4 = new FourthRatings();
         AllFilters a = new AllFilters();
         a.addFilter(new GenreFilter("Adventure"));
         a.addFilter(new MinutesFilter(100, 200));
@@ -53,18 +53,17 @@ public class MovieRunnerSimilarRatings {
     }
     
     public void printSimilarRatingsByYearAfterAndMinutes() {
-        FourthRatings tr4 = new FourthRatings();//do i need put filename here?
+        FourthRatings tr4 = new FourthRatings();
         AllFilters a = new AllFilters();
         a.addFilter(new YearAfterFilter(2000));
         a.addFilter(new MinutesFilter(80, 100));
         ArrayList<Rating> ratingList = tr4.getSimilarRatingsByFilter("65", 10, 5, a);
         System.out.println("Found ratings for movies : " + ratingList.size());
-        //Collections.sort(ratingList);
         int printNum = ratingList.size();
         if (printNum >= 3) printNum = 3;
         for (int i = 0; i < printNum; i++) {
-            //System.out.printf("%-10.2f%-5d%-5d%-16s%-5s%n", ratingList.get(i).getValue(), MovieDatabase.getYear(ratingList.get(i).getItem()), MovieDatabase.getMinutes(ratingList.get(i).getItem()), MovieDatabase.getTitle(ratingList.get(i).getItem()), MovieDatabase.getGenres(ratingList.get(i).getItem()));
-            System.out.printf("%-10.2f%-5s%n", ratingList.get(i).getValue(), MovieDatabase.getMovie(ratingList.get(i).getItem()).toString());
+          
+         System.out.printf("%-10.2f%-5s%n", ratingList.get(i).getValue(), MovieDatabase.getMovie(ratingList.get(i).getItem()).toString());
             
         }
     }
@@ -92,19 +91,16 @@ public class MovieRunnerSimilarRatings {
         mra.printSimilarRatingsByGenre();
         double duration2 = (System.nanoTime() - start2) / 1000000000;
         System.out.println("---------------Duration = " + duration2 + "s-------------");
-        //12.3
         System.out.println("---------------Test: printSimilarRatingsDirector()----------------");
         double start3 = System.nanoTime();
         mra.printSimilarRatingsByDirector();
         double duration3 = (System.nanoTime() - start3) / 1000000000;
         System.out.println("---------------Duration = " + duration3 + "s-------------");
-        //0.511
         System.out.println("---------------Test: printSimilarRatingsByGenreAndMinutes()----------------");
         double start4 = System.nanoTime();
         mra.printSimilarRatingsByGenreAndMinutes();
         double duration4 = (System.nanoTime() - start4) / 1000000000;
         System.out.println("---------------Duration = " + duration4 + "s-------------");
-        //6.3876
         System.out.println("---------------Test: printSimilarRatingsByYearAfterAndMinutes()----------------");
         double start5 = System.nanoTime();
         mra.printSimilarRatingsByYearAfterAndMinutes();

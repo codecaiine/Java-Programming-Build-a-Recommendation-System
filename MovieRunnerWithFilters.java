@@ -4,9 +4,9 @@ import java.util.Collections;
 
 public class MovieRunnerWithFilters {
     public void printAverageRatings() {
-        ThirdRatings tr = new ThirdRatings("data/ratings_short.csv");//do i need put filename here?
+        ThirdRatings tr = new ThirdRatings("data/ratings_short.csv");
         MovieDatabase.initialize("ratedmovies_short.csv");
-        System.out.println("Movie size (# of movie in list) : " + MovieDatabase.size());// need initialize first.
+        System.out.println("Movie size (# of movie in list) : " + MovieDatabase.size());
         System.out.println("Rater size (# of ppl who rates) : " + tr.getRaterSize());
         ArrayList<Rating> ratingList = tr.getAverageRatings(1);
         System.out.println("Found ratings for movies : " + ratingList.size());
@@ -34,7 +34,7 @@ public class MovieRunnerWithFilters {
     }
     
     public void printAverageRatingsByYear() {
-        ThirdRatings tr3 = new ThirdRatings("data/ratings_short.csv");//do i need put filename here?
+        ThirdRatings tr3 = new ThirdRatings("data/ratings_short.csv");
         MovieDatabase.initialize("ratedmovies_short.csv");
         System.out.println("Movie size (# of movie in list) : " + MovieDatabase.size());// need initialize first.
         System.out.println("Rater size (# of ppl who rates) : " + tr3.getRaterSize());
@@ -47,9 +47,9 @@ public class MovieRunnerWithFilters {
     }
     
     public void printAverageRatingsByGenre() {
-        ThirdRatings tr4 = new ThirdRatings("data/ratings_short.csv");//do i need put filename here?
+        ThirdRatings tr4 = new ThirdRatings("data/ratings_short.csv");
         MovieDatabase.initialize("ratedmovies_short.csv");
-        System.out.println("Movie size (# of movie in list) : " + MovieDatabase.size());// need initialize first.
+        System.out.println("Movie size (# of movie in list) : " + MovieDatabase.size());
         System.out.println("Rater size (# of ppl who rates) : " + tr4.getRaterSize());
         ArrayList<Rating> ratingList = tr4.getAverageRatingsByFilter(1, new GenreFilter("Crime"));
         System.out.println("Found ratings for movies : " + ratingList.size());
@@ -60,9 +60,9 @@ public class MovieRunnerWithFilters {
     }
     
     public void printAverageRatingsByMinutes() {
-        ThirdRatings tr5 = new ThirdRatings("data/ratings_short.csv");//do i need put filename here?
+        ThirdRatings tr5 = new ThirdRatings("data/ratings_short.csv");
         MovieDatabase.initialize("ratedmovies_short.csv");
-        System.out.println("Movie size (# of movie in list) : " + MovieDatabase.size());// need initialize first.
+        System.out.println("Movie size (# of movie in list) : " + MovieDatabase.size());
         System.out.println("Rater size (# of ppl who rates) : " + tr5.getRaterSize());
         ArrayList<Rating> ratingList = tr5.getAverageRatingsByFilter(1, new MinutesFilter(110, 170));
         System.out.println("Found ratings for movies : " + ratingList.size());
@@ -73,11 +73,10 @@ public class MovieRunnerWithFilters {
     }
     
     public void printAverageRatingsByDirectors() {
-        ThirdRatings tr5 = new ThirdRatings("data/ratings_short.csv");//do i need put filename here?
+        ThirdRatings tr5 = new ThirdRatings("data/ratings_short.csv");
         MovieDatabase.initialize("ratedmovies_short.csv");
-        System.out.println("Movie size (# of movie in list) : " + MovieDatabase.size());// need initialize first.
+        System.out.println("Movie size (# of movie in list) : " + MovieDatabase.size());
         System.out.println("Rater size (# of ppl who rates) : " + tr5.getRaterSize());
-        //what if i use DirectorsFilter d instead of Filter?
         Filter d = new DirectorsFilter("Charles Chaplin,Michael Mann,Spike Jonze");
         ArrayList<Rating> ratingList = tr5.getAverageRatingsByFilter(1, d);
         System.out.println("Found ratings for movies : " + ratingList.size());
@@ -88,9 +87,9 @@ public class MovieRunnerWithFilters {
     }
     
     public void printAverageRatingsByYearAfterAndGenre() {
-        ThirdRatings tr5 = new ThirdRatings("data/ratings_short.csv");//do i need put filename here?
+        ThirdRatings tr5 = new ThirdRatings("data/ratings_short.csv");
         MovieDatabase.initialize("ratedmovies_short.csv");
-        System.out.println("Movie size (# of movie in list) : " + MovieDatabase.size());// need initialize first.
+        System.out.println("Movie size (# of movie in list) : " + MovieDatabase.size());// n
         System.out.println("Rater size (# of ppl who rates) : " + tr5.getRaterSize());
         //why here must use AllFilters instead of Filter?
         AllFilters all = new AllFilters();

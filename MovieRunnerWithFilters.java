@@ -139,12 +139,6 @@ public class MovieRunnerWithFilters {
         System.out.println("---------------Test: printAverageRatingsByYearAfterAndGenre() ----------------");
         mra.printAverageRatingsByYearAfterAndGenre();
         System.out.println("---------------Test: printAverageRatingsByDirectorsAndMinutes() ----------------");
-        mra.printAverageRatingsByDirectorsAndMinutes();
-        //why cannot print the default value;
-        //        boolean a;
-        //        String b;
-        //        System.out.println(a);
-        //        System.out.println(b);
-        
+        mra.printAverageRatingsByDirectorsAndMinutes(); 
     }
 }

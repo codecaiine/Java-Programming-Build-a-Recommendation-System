@@ -6,14 +6,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class RaterDatabase {
-    private static HashMap<String, Rater> ourRaters;//key:rater id, value: rater object
+    private static HashMap<String, Rater> ourRaters;
     
-    /**
-     * A private initialize method with no parameters that initializes
-     * the HashMap ourRaters if it does not exist.
-     **/
     private static void initialize() {
-        // this method is only called from addRatings
         if (ourRaters == null) {
             ourRaters = new HashMap<String, Rater>();
         }

@@ -6,10 +6,8 @@ public class SecondRatings {
     private ArrayList<Rater> myRaters;
     
     public SecondRatings() {
-        // default constructor
         this("ratedmoviesfull.csv", "ratings.csv");
     }
-    //---------------todo: why only above won't compile???-------------
     
     public SecondRatings(String movieFile, String ratingFile) {
         FirstRatings a = new FirstRatings();
@@ -25,7 +23,6 @@ public class SecondRatings {
         return myRaters.size();
     }
     
-    //private helper method
     private double getAverageByID(String movieID, int minimalRaters) {
         int count = 0;
         double total = 0;
@@ -35,10 +32,8 @@ public class SecondRatings {
             if (rating != -1) {
                 count++;
                 total += rating;
-                // System.out.println(count + " : " + "id = " + i.getID() + " rating " + rating + " ave " + total);
             }
         }
-        //System.out.println("Movie ID = " + movieID + " : " + count + " : " + total + " : " + total / count);
         if (count >= minimalRaters) return total / count;
         return 0.0;
     }
@@ -73,10 +68,8 @@ public class SecondRatings {
     
     public static void main(String[] args) {
         SecondRatings sr = new SecondRatings("data/ratedmovies_short.csv", "data/ratings_short.csv");
-        //System.out.println(sr.getAverageByID("0790636", 2));
         System.out.println("---------------test-------------");
         System.out.println(sr.getAverageRatings(2));
-        //[[6414, 0.0], [68646, 0.0], [113277, 0.0], [1798709, 8.25], [790636, 0.0]]
     }
     
 }

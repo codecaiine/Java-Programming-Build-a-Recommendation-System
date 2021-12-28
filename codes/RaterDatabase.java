@@ -1,10 +1,3 @@
-/**
- * Write a description of RaterDatabase here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-
 import edu.duke.*;
 import java.util.*;
 import org.apache.commons.csv.*;
@@ -13,7 +6,6 @@ public class RaterDatabase {
     private static HashMap<String,Rater> ourRaters;
      
 	private static void initialize() {
-	    // this method is only called from addRatings 
 		if (ourRaters == null) {
 			ourRaters = new HashMap<String,Rater>();
 		}

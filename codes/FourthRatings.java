@@ -1,10 +1,3 @@
-
-/**
- * Write a description of FourthRatings here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 import java.util.*;
 
 public class FourthRatings {

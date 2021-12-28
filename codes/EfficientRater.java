@@ -1,11 +1,3 @@
-
-/**
- * Write a description of EfficientRater here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-
 import java.util.*;
 
 public class EfficientRater implements Rater{

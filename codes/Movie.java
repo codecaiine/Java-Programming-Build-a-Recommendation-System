@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Movie {
     private String id;
@@ -8,16 +10,16 @@ public class Movie {
     private String country;
     private String poster;
     private int minutes;
-    
-    public Movie(String anID, String aTitle, String aYear, String theGenres) {
+
+    public Movie (String anID, String aTitle, String aYear, String theGenres) {
         id = anID.trim();
         title = aTitle.trim();
         year = Integer.parseInt(aYear.trim());
         genres = theGenres;
     }
-    
-    public Movie(String anID, String aTitle, String aYear, String theGenres, String aDirector,
-                 String aCountry, String aPoster, int theMinutes) {
+
+    public Movie (String anID, String aTitle, String aYear, String theGenres, String aDirector,
+    String aCountry, String aPoster, int theMinutes) {
         id = anID.trim();
         title = aTitle.trim();
         year = Integer.parseInt(aYear.trim());
@@ -27,40 +29,40 @@ public class Movie {
         poster = aPoster;
         minutes = theMinutes;
     }
-   
-    public String getID() {
+
+    public String getID () {
         return id;
     }
-    
-    public String getTitle() {
+
+    public String getTitle () {
         return title;
     }
-   
-    public int getYear() {
+
+    public int getYear () {
         return year;
     }
-    
-    public String getGenres() {
+
+    public String getGenres () {
         return genres;
     }
-    
-    public String getCountry() {
+
+    public String getCountry(){
         return country;
     }
-    
-    public String getDirector() {
+
+    public String getDirector(){
         return director;
     }
-    
-    public String getPoster() {
+
+    public String getPoster(){
         return poster;
     }
-    
-    public int getMinutes() {
+
+    public int getMinutes(){
         return minutes;
     }
-    
-    public String toString() {
+
+    public String toString () {
         String result = "Movie [id=" + id + ", title=" + title + ", year=" + year;
         result += ", genres= " + genres + "]";
         return result;

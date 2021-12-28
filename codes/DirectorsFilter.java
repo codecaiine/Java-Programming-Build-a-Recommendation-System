@@ -1,10 +1,3 @@
-
-/**
- * Write a description of DirectorsFilter here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class DirectorsFilter implements Filter{
     private String[] dirList;
     
